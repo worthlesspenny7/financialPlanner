@@ -4,6 +4,8 @@ class User(models.Model):
     user_name = models.CharField(max_length=50)
     profile_create_date = models.DateTimeField('User Since')
     min_balance = models.DecimalField('Minimum Balance', max_digits=10, decimal_places=2)
+    def __unicode__(self):
+        return self.user_name
     
 class Goal(models.Model):
     user = models.ForeignKey(User)
@@ -11,3 +13,6 @@ class Goal(models.Model):
     cost_goal = models.DecimalField('Goal Cost', max_digits=10, decimal_places=2)
     date_goal = models.DateTimeField('Goal Date')
     start_goal = models.DateTimeField('Goal Start')
+    def __unicode__(self):
+        return self.name_goal
+        

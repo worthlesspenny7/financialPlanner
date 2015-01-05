@@ -1,0 +1,5 @@
+from django.utils import timezone
+from goalsChart.models import User, Goal
+
+r.goal_set.create(name_goal='birthday', cost_goal=200.00, date_goal=timezone.now(), start_goal=timezone.now())
+
